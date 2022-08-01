@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CreateBookController;
+use App\Http\Controllers\Api\GetBookController;
 use App\Http\Controllers\Api\GetCollectorSummaryController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('books', [CreateBookController::class, '__invoke']);
-Route::get('books/{uuid}', [GetBookController::class, '__invoke']);
-Route::get('collectors/{id}/recently-added', [GetCollectorSummaryController::class, '__invoke']);
+Route::post('books', CreateBookController::class);
+Route::get('books/{book}', GetBookController::class);
+Route::get('collectors/{collector}/recently-added', GetCollectorSummaryController::class);

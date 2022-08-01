@@ -9,13 +9,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('collectors', function (Blueprint $table) {
-            // ID
             $table->id();
-
-            // Relations
-            // ...
-
-            // Data
             $table->string('name');
             $table->timestamps();
         });
